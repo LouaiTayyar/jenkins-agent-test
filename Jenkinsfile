@@ -9,5 +9,13 @@ pipeline {
                 }
             }
          }
+    stage('Verify Available Tools') {
+        sh '''
+            docker version 
+            docker info 
+            docker compose version
+            curl --version
+        '''
+      }
     }
 }
