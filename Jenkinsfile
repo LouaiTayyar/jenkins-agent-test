@@ -1,4 +1,6 @@
-agent agent1 {
+pipeline {
+    agent agent1 
+    stages {
     stage('Checkout SCM Files') {
         checkout scm
     }
@@ -27,4 +29,5 @@ agent agent1 {
     stage('Run Unit Tests') {
         sh 'docker exec -i sensorsapi_api python3 manage.py test'
     }
+  }
 }
