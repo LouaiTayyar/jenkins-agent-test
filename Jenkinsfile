@@ -1,28 +1,13 @@
-agentName = "agent1"
-agentLabel = "${println 'Right Now the Agent Name is ' + agentName; return agentName}"
-
 pipeline {
     agent none
-
     stages {
-        stage('Checking') {
-            steps {
-                script {
-                    println agentLabel
-                    println agentName
-                }
-            }
-        }
         stage('Final') {
-            agent { label agentLabel }
-
+            agent { label "agent1" }
             steps {
                 script {
-                    println agentLabel
-                    println agentName
+                    println "This is done on agent one"
                 }
             }
-    }
-
+         }
     }
 }
