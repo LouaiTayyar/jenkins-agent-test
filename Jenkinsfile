@@ -6,7 +6,6 @@ pipeline {
             steps {
                 script {
                     println "This is done on agent one"
-                    docker version
                 }
             }
          }
