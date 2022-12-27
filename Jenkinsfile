@@ -1,5 +1,6 @@
 pipeline {
-    agent agent1 
+    agent {
+    agent1 
     stages {
     stage('Checkout SCM Files') {
         checkout scm
@@ -30,4 +31,5 @@ pipeline {
         sh 'docker exec -i sensorsapi_api python3 manage.py test'
     }
   }
+}
 }
