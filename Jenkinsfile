@@ -1,4 +1,4 @@
-node {
+agent agent1 {
     stage('Checkout SCM Files') {
         checkout scm
     }
