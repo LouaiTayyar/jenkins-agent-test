@@ -10,7 +10,6 @@ pipeline {
             }
          }
         stage('Verify Available Tools') {
-           agent { label "agent1" }
             steps {
              sh '''
                docker version 
