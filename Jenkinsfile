@@ -9,7 +9,7 @@ pipeline {
                 '''
             }
          }
-        stage('Docker') {
+        stage('Check Docker') {
             agent { label "DevNode" }
             steps {
                 sh '''
