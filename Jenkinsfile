@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages {
         stage('Hello') {
-            agent { label "agent1" }
+            agent { label "DevNode" }
             steps {
                 sh '''
                 echo Hello from agent1 
