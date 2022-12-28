@@ -1,13 +1,13 @@
 pipeline {
-    agent { label "agent1" }
+    agent any
     stages {
         stage('stage name') {
-            agent { docker { image "quay.io/keycloak/keycloak:20.0.1" } }
+            agent { label "agent1" }
             steps {
                 sh '''
                 echo Hello from pipeline 
                 '''
             }
-        }
+         }
     }
 }
