@@ -1,12 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('stage name') {
+        stage('Hello') {
             agent { label "agent1" }
             steps {
                 sh '''
-                echo Hello from pipeline 
-                docker version
+                echo Hello from agent1 
                 '''
             }
          }
