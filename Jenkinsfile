@@ -7,6 +7,7 @@ pipeline {
                 sh '''
                 echo Hello from DevNode server
                 docker --version
+                docker-compose up 
                 '''
             }
          }
