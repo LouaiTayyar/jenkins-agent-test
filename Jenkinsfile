@@ -5,7 +5,7 @@ pipeline {
             agent { label "DevNode" }
             steps {
                 sh '''
-                echo Hello from DevNode server ( the remote jenkins agent )
+                echo Hello from DevNode server
                 docker --version
                 '''
             }
