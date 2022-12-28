@@ -6,6 +6,13 @@ pipeline {
             steps {
                 sh '''
                 echo Hello from DevNode server
+                '''
+            }
+         }
+        stage('Docker') {
+            agent { label "DevNode" }
+            steps {
+                sh '''
                 docker --version
                 docker-compose up 
                 '''
