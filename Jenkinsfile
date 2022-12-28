@@ -14,7 +14,6 @@ pipeline {
             steps {
                 sh '''
                 docker --version
-                docker-compose up 
                 '''
             }
          }
