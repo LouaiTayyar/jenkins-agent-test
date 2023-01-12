@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages {
         stage('Hello') {
-            agent { label "DevNode" }
+            agent { label "devnode" }
             steps {
                 sh '''
                 echo Hello from DevNode server
@@ -10,7 +10,7 @@ pipeline {
             }
          }
         stage('Check Docker') {
-            agent { label "DevNode" }
+            agent { label "devnode" }
             steps {
                 sh '''
                 docker --version
